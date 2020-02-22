@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js"></script>
+    <title>Guitar Shop</title>
+  </head>
+  <body>
+    <form id="new-guitar">
+      <div class="form-item">
+        <label for="brand" class="primary">Brand: </label>
+        <input type="text" id="brand" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="model" class="primary">Model: </label>
+        <input type="text" id="model" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="price" class="primary">Price: </label>
+        <input type="text" id="price" required/>
+      </div>
+
+      <input type="submit" value="Save"/>
+    </form>
+
+    <h3>List of guitars</h3>
+    <ul id="guitar-list">
+
+    </ul>
+
+    <input type="button" id="deleteall" value="Delete all">
+  </body>
+</html>
