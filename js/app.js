@@ -12,20 +12,29 @@ deleteAll.addEventListener('click', deleteAllButton);
 const handleFormSubmit = function () {
   event.preventDefault();
 
-  const newListItem = document.createElement('li');
-  newListItem.textContent = event.target.brand.value;
+  const guitarListItem = createGuitarListItem(event.target);
+   const guitarList = document.querySelector('#guitar-list');
+   guitarList.appendChild(guitarListItem);
 
-  const newListItem2 = document.createElement('li');
-  newListItem2.textContent = event.target.model.value;
+}
 
-  const newListItem3 = document.createElement('li');
-  newListItem3.textContent = event.target.price.value;
+  const createGuitarListItem = function () {
+  const guitarListItem = document.createElement('li');
+  guitarListItem.classList.add('guitar-list-item');
 
+    const brand = document.createElement('h2');
+    brand.textContent = `Brand: ${event.target.brand.value}`;
+    guitarListItem.appendChild(brand);
 
-  const list = document.querySelector('#guitar-list');
-  list.appendChild(newListItem);
-  list.appendChild(newListItem2);
-  list.appendChild(newListItem3);
+    const model = document.createElement('h3');
+    model.textContent = `Model: ${event.target.model.value}`;
+    guitarListItem.appendChild(model);
+
+    const price = document.createElement('p');
+    price.textContent = `Price: £${event.target.price.value}`;
+    guitarListItem.appendChild(price);
+
+  return guitarListItem;
 }
 
 const deleteAllButton = function () {

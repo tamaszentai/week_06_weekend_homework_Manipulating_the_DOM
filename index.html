@@ -8,22 +8,25 @@
   </head>
   <body>
     <form id="new-guitar">
+      <div id="form-wrapper">
       <div class="form-item">
-        <label for="brand" class="primary">Brand: </label>
+        <label for="brand" class="primary">Brand</label>
         <input type="text" id="brand" required/>
       </div>
 
       <div class="form-item">
-        <label for="model" class="primary">Model: </label>
+        <label for="model" class="primary">Model</label>
         <input type="text" id="model" required/>
       </div>
 
       <div class="form-item">
-        <label for="price" class="primary">Price: </label>
+        <label for="price" class="primary">Price</label>
         <input type="text" id="price" required/>
+      </div>
       </div>
 
       <input type="submit" value="Save"/>
+        <input type="button" id="deleteall" value="Delete all">
     </form>
 
     <h3>List of guitars</h3>
@@ -31,6 +34,6 @@
 
     </ul>
 
-    <input type="button" id="deleteall" value="Delete all">
+
   </body>
 </html>

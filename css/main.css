@@ -1,4 +1,44 @@
 body {
-  background-color: dodgerblue;
-  color: orange;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Palatino;
+  color: white;
+  text
+}
+
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  margin-right: 1.8rem;
+}
+
+label.primary {
+  display: block;
+  margin: 0.4em 0;
+}
+
+label::after {
+  content: ":";
+}
+
+button, input[type="submit"] {
+  margin-top: 1rem;
+}
+
+#guitar-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.guitar-list-item {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5%;
+  background: black;
 }
